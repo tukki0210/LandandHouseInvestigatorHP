@@ -9,9 +9,6 @@ $text-color: #070402;
 $white: #ffffff;
 $black: #333;
 
-// html {
-//   scroll-behavior: smooth;
-// }
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +17,7 @@ $black: #333;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Noto Serif JP", serif;
   line-height: 1.6;
   background-color: $background-color;
 }
@@ -46,9 +43,7 @@ h2::after {
 h3 {
   font-size: 2rem;
   color: $text-color;
-  // text-align: center;
-  margin-bottom: 2rem;
-  // border-bottom: 4px solid $main-color;
+  margin: 2rem 0;
 }
 
 p {
@@ -59,11 +54,13 @@ p {
 section {
   // height: 100vh;
   padding-top: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 4rem auto;
 }
 
 header {
@@ -74,8 +71,9 @@ header {
   height: 120px;
   background-color: $white;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   opacity: 0.8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
   nav {
     display: flex;
@@ -90,6 +88,11 @@ header {
       img {
         height: 100px;
         width: auto;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
 
@@ -100,16 +103,18 @@ header {
       transition: color 0.3s;
       font-size: larger;
       font-weight: bold;
+      transition: transform 0.3s;
 
       &:hover {
-        color: $main-color;
+        transform: scale(1.05);
       }
     }
   }
 }
 
 /* ヘッダー */
-.hero-section {
+#hero {
+  max-width: 100vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -174,6 +179,34 @@ header {
       }
     }
   }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 4rem;
+    // border: 1px solid $black;
+    // background-color: $main-color;
+    // margin: 0 auto;
+
+    tr {
+      // border-bottom: 1px solid $black;
+    }
+    th {
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 30%;
+      padding: 1rem 0;
+      // border-bottom: 1px solid $black;
+      border: none;
+      color: $black;
+    }
+    td {
+      font-size: 1.2rem;
+      // font-weight: bold;
+      padding: 1rem;
+      border: none;
+      color: $text-color;
+    }
+  }
 }
 
 .intro-container {
@@ -185,30 +218,21 @@ header {
 }
 
 /* サービス概要セクション */
-
-.services-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+#services {
+  background-color: $white;
+  padding: 5rem;
 }
 
 .service-item {
-  width: 50%;
-  margin-bottom: 2rem;
-  text-align: center;
-  padding: 3rem;
-
-  &:first-child {
-    background-color: $accent-color;
-  }
-  &:last-child {
-    background-color: $accent-color2;
-  }
+  display: flex;
+  margin: 4rem auto;
 
   img {
-    width: 300px;
-    height: 200px;
-    margin-bottom: 1rem;
+    width: 40%;
+  }
+
+  .service-text {
+    margin-left: 4rem;
   }
 }
 
@@ -217,39 +241,30 @@ header {
 #about {
   background-color: $white;
   padding: 5rem;
-}
-.about-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 5rem auto;
-}
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 90%;
-  margin: 0 auto;
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
 
-  tr {
-    border-bottom: 2px solid $black;
-  }
-  th {
-    font-size: 2rem;
-    font-weight: bold;
-    width: 30%;
-    padding: 1rem 0;
-    border-bottom: 1px solid $black;
-    border: none;
-    color: $black;
-  }
-  td {
-    font-size: 1.6rem;
-    // font-weight: bold;
-    padding: 1rem 0;
-    border: none;
-    color: $text-color;
+    tr {
+      border-bottom: 2px solid $black;
+    }
+    th {
+      font-size: 2rem;
+      font-weight: bold;
+      width: 30%;
+      padding: 1rem 0;
+      border-bottom: 1px solid $black;
+      border: none;
+      color: $black;
+    }
+    td {
+      font-size: 1.6rem;
+      // font-weight: bold;
+      padding: 1rem;
+      border: none;
+      color: $text-color;
+    }
   }
 }
 
@@ -257,63 +272,16 @@ table {
 #access {
   .map {
     display: flex;
-    margin: 3rem auto;
-    width: 1100px;
+    margin-bottom: 4rem;
 
     .map_right {
       width: 600px;
-      margin: 1rem;
+      margin-left: 2rem;
       padding: 1rem;
 
       p {
         font-size: 1.5rem;
-        
       }
-    }
-  }
-}
-
-/* お問い合わせセクション */
-.contact-section {
-  padding: 3rem;
-}
-
-.contact-section p {
-  font-size: 1.25rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  label {
-    font-size: 1.25rem;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  input,
-  textarea {
-    width: 80%;
-    padding: 0.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-  }
-
-  input[type="submit"] {
-    width: auto;
-    background-color: $main-color;
-    color: $white;
-    border: none;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: $secondary-color;
     }
   }
 }
@@ -323,16 +291,24 @@ footer {
   color: $white;
   text-align: center;
   padding: 1rem 0;
-  height: 20vh;
+  height: 15vh;
 }
 
-/* 画面サイズが 768px 以下の場合に適用されるスタイル */
-@media screen and (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
+/* モバイルデバイス用のスタイル */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
   }
-  .philosophy,
-  .vision {
-    margin-bottom: 2rem;
+  .hero-text, .greeting-content, .service-item {
+      text-align: center;
+  }
+  .container {
+      padding: 20px;
+  }
+  .map {
+      flex-direction: column;
+  }
+  iframe {
+      width: 100%;
   }
 }
