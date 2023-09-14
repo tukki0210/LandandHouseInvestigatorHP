@@ -292,20 +292,57 @@ footer {
 }
 
 /* モバイルデバイス用のスタイル */
+/* モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
   nav {
-      flex-direction: column;
+    flex-direction: column;
+    align-items: center;
   }
   .hero-text, .greeting-content, .service-item {
-      text-align: center;
+    text-align: center;
   }
   .container {
-      padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .greeting {
+    flex-direction: column;
+    .greeting-icon img {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .greeting-content {
+      width: 100%;
+    }
+  }
+  .service-item {
+    flex-direction: column;
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .service-text {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
   }
   .map {
-      flex-direction: column;
+    flex-direction: column;
   }
   iframe {
-      width: 100%;
+    width: 100%;
   }
 }
+
