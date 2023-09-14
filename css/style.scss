@@ -159,7 +159,7 @@ header {
     width: 300px;
     height: 400px;
     border-radius: 2%;
-    box-shadow: #070402 0 0 10px;
+    // box-shadow: #070402 0 0 10px;
   }
 
   .greeting-content {
@@ -183,9 +183,6 @@ header {
     border-collapse: collapse;
     border-spacing: 0;
     margin-top: 4rem;
-    // border: 1px solid $black;
-    // background-color: $main-color;
-    // margin: 0 auto;
 
     tr {
       // border-bottom: 1px solid $black;
@@ -196,7 +193,7 @@ header {
       width: 30%;
       padding: 1rem 0;
       // border-bottom: 1px solid $black;
-      border: none;
+      // border: none;
       color: $black;
     }
     td {
@@ -247,14 +244,14 @@ header {
     border-spacing: 0;
 
     tr {
-      border-bottom: 2px solid $black;
+      border-bottom: 1px solid $black;
     }
     th {
       font-size: 2rem;
       font-weight: bold;
       width: 30%;
       padding: 1rem 0;
-      border-bottom: 1px solid $black;
+      // border-bottom: 1px solid $black;
       border: none;
       color: $black;
     }
@@ -262,7 +259,7 @@ header {
       font-size: 1.6rem;
       // font-weight: bold;
       padding: 1rem;
-      border: none;
+      // border: none;
       color: $text-color;
     }
   }
