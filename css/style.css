@@ -26,7 +26,7 @@ h2::after {
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: 3px solid #32609e;
+  border-bottom: 3px solid #18a2d5;
   width: 20%;
   bottom: -3px;
 }
@@ -38,7 +38,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -58,12 +58,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 130px;
   background-color: #ffffff;
   z-index: 1000;
   padding: 1rem 2rem;
   opacity: 0.8;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 header nav {
   display: flex;
@@ -76,23 +75,23 @@ header nav .logo {
   margin-right: 1rem;
 }
 header nav .logo img {
-  height: 100px;
+  height: 90px;
   width: auto;
   transition: transform 0.3s;
 }
 header nav .logo img:hover {
   transform: scale(1.05);
 }
-header nav a {
+header nav div.link a {
   color: #070402;
+  font-size: 1.5rem;
   text-decoration: none;
-  margin: 0 1rem;
+  margin: 1rem;
   transition: color 0.3s;
-  font-size: larger;
   font-weight: bold;
   transition: transform 0.3s;
 }
-header nav a:hover {
+header nav div.link a:hover {
   transform: scale(1.05);
 }
 
@@ -107,25 +106,52 @@ header nav a:hover {
   padding-top: 5rem;
 }
 #hero .hero-image img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.7;
+  filter: saturate(150%);
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 #hero .hero-text {
-  color: #070402;
-  text-align: center;
   z-index: 1;
+  position: absolute;
+  top: 300px;
+  left: 150px;
+}
+#hero .hero-text div {
+  background-color: #18a2d5;
+  margin: 20px;
+}
+#hero .hero-text div p {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 1rem;
+}
+#hero .hero-text div.philosophy {
+  background-color: #ffffff;
+}
+#hero .hero-text div.philosophy p {
+  color: #333;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 2rem;
+}
+#hero .hero-text div.philosophy p span {
+  color: #18a2d5;
+  font-size: 4.5rem;
+  font-weight: bolder;
 }
 #hero .hero-text h1 {
   font-size: 5rem;
-  margin-bottom: 1rem;
+  font-weight: bolder;
+  margin-bottom: 3rem;
 }
 #hero .hero-text p {
-  font-size: 1.5rem;
+  font-weight: bolder;
   margin-bottom: 1rem;
 }
 
@@ -162,14 +188,14 @@ header nav a:hover {
   margin-top: 4rem;
 }
 .greeting table th {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   width: 30%;
   padding: 1rem 0;
   color: #333;
 }
 .greeting table td {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   padding: 1rem;
   border: none;
   color: #070402;
@@ -239,7 +265,7 @@ header nav a:hover {
 }
 
 footer {
-  background-color: #32609e;
+  background-color: #18a2d5;
   color: #ffffff;
   text-align: center;
   padding: 1rem 0;
@@ -250,22 +276,55 @@ footer {
 /* モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   h2 {
     font-size: 2.5rem;
   }
   h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
-  nav {
-    flex-direction: column;
-    align-items: center;
+  header {
+    width: 100vw;
+    position: relative;
+    height: 150px;
   }
-  .hero-text, .greeting-content, .service-item {
+  header .link {
+    display: none;
+  }
+  #hero .hero-image img {
+    width: 100vw;
+    right: auto;
+    left: 0;
+  }
+  #hero .hero-text {
+    top: 50px;
+    left: 40px;
+  }
+  #hero .hero-text div p {
+    font-size: 2rem;
+  }
+  #hero .hero-text div.philosophy p {
+    font-size: 2rem;
+  }
+  #hero .hero-text div.philosophy p span {
+    font-size: 2.5rem;
+  }
+  .greeting table {
+    margin-top: 1rem;
+  }
+  .greeting table th {
+    font-size: 1.5rem;
+  }
+  .greeting table td {
+    font-size: 1.2rem;
+  }
+  .hero-text,
+  .greeting-content,
+  .service-item {
     text-align: center;
   }
   .container {
@@ -283,10 +342,10 @@ footer {
     width: 100%;
   }
   .service-item {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .service-item img {
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
   }
   .service-item .service-text {
@@ -297,6 +356,7 @@ footer {
     flex-direction: column;
   }
   iframe {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
