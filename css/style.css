@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   font-family: "Noto Serif JP", serif;
   line-height: 1.6;
@@ -16,7 +20,7 @@ body {
 h2 {
   font-size: 3rem;
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0 1rem 0;
   color: #070402;
   position: relative;
   border-bottom: 3px solid #b5cae6;
@@ -180,7 +184,7 @@ header nav div.link a:hover {
 .greeting .greeting-content .sign img {
   width: 300px;
   height: 100px;
-  margin: 0 1rem;
+  margin: 0 auto;
 }
 .greeting table {
   border-collapse: collapse;
@@ -275,11 +279,15 @@ footer {
 /* モバイルデバイス用のスタイル */
 /* モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
+  html {
+    max-width: 768px;
+  }
   h1 {
     font-size: 3rem;
   }
   h2 {
     font-size: 2.5rem;
+    margin: 2rem 0 1rem 0;
   }
   h3 {
     font-size: 2rem;
@@ -352,8 +360,20 @@ footer {
     margin-left: 0;
     margin-top: 2rem;
   }
+  #about {
+    padding: 1rem;
+  }
+  #about table th {
+    font-size: 1.5rem;
+  }
+  #about table td {
+    font-size: 1.2rem;
+  }
   .map {
     flex-direction: column;
+  }
+  .map .map_right {
+    width: 100%;
   }
   iframe {
     width: 90%;

@@ -16,6 +16,9 @@ $black: #333;
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
 body {
   // width: 100vw;
   font-family: "Noto Serif JP", serif;
@@ -26,7 +29,7 @@ body {
 h2 {
   font-size: 3rem;
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0 1rem 0;
   color: $text-color;
   position: relative;
   border-bottom: 3px solid $main-color;
@@ -203,7 +206,7 @@ header {
       img {
         width: 300px;
         height: 100px;
-        margin: 0 1rem;
+        margin: 0 auto;
       }
     }
   }
@@ -321,13 +324,14 @@ footer {
 /* モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
   html {
-    // width: 100vw;
+    max-width: 768px
   }
   h1 {
     font-size: 3rem;
   }
   h2 {
     font-size: 2.5rem;
+    margin:2rem 0 1rem 0;
   }
   h3 {
     font-size: 2rem;
@@ -335,6 +339,7 @@ footer {
   p {
     font-size: 1.5rem;
   }
+
   header {
     width: 100vw;
     position: relative;
@@ -344,6 +349,7 @@ footer {
       display: none;
     }
   }
+
 
   #hero {
     .hero-image img {
@@ -413,8 +419,25 @@ footer {
       margin-top: 2rem;
     }
   }
+
+  #about {
+    padding: 1rem;
+
+    table {
+      th {
+        font-size: 1.5rem;
+      }
+      td {
+        font-size: 1.2rem;
+      }
+    }
+  }
   .map {
     flex-direction: column;
+
+    .map_right {
+      width: 100%;
+    }
   }
   iframe {
     width: 90%;
